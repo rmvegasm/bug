@@ -1,0 +1,11 @@
+Package: bug
+Title: Minimal example for roxygen bug
+Version: 0.0.0.9000
+Authors@R: person("Rodrigo", "Vega", email = "rmvegasm@gmail.com", role = c("aut", "cre"))
+Description: Minimal example for roxygen bug related to special characters.
+Depends: R (>= 3.3.3)
+License: GPL-3 + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.0.1

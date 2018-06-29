@@ -1,0 +1,11 @@
+<h1 id="what-i-think-its-doing">What i think it's doing</h1>
+<p>When <code>devtools::document</code> encounters a left bracket <code>[</code>, it writes the correct line:</p>
+<div class="sourceCode"><pre class="sourceCode tex"><code class="sourceCode latex"><span class="fu">\code</span>{[} <span class="fu">\code</span>{foo[bar]}</code></pre></div>
+<p>followed by this line in which the character between the backticks is out of the code construct, followed by all the characters until the next backtick within a <code>\code{}</code> construct, and ending in a cryptic statement:</p>
+<div class="sourceCode"><pre class="sourceCode tex"><code class="sourceCode latex">[<span class="fu">\code</span>{}foo[bar]: R:<span class="co">%60%20%60foo[bar</span></code></pre></div>
+<p>I think eventualy this leads to the &quot;unmatched braces or quotes&quot; error...</p>
+<ul>
+<li>could this error be signaled while reading the <code>.Rd</code> file?<br />
+</li>
+<li>is there an intermediate form within the <code>roxygen</code> comments and the <code>.Rd</code>?</li>
+</ul>
